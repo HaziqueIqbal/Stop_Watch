@@ -1,23 +1,29 @@
 *{
-    overflow: hidden;
-
+    overflow-x: hidden;
 }
-body{
-    background-image: linear-gradient(to bottom, #0f1b36, #114d7e);
-    background-repeat: no-repeat;
-}
-.content p{
+.counter div{
     display: inline-block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 150px;
+    color: wheat;
+    text-shadow: 2px 2px 6px #e14594;
 }
-.content {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+.edit{
+    width: 200px;
+    text-align: center;
+}
+html{
+    height: 100%;
+}
+.counter{
+   margin-top: 150px;
+}
+.content{
+
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: nowrap;
-}
-.extra{
-    height: 115px;
+    align-items: center;
 }
 button{
     background: none;
@@ -31,6 +37,7 @@ button{
     font-weight: lighter;
     color: white;
     outline: none;
+    margin: 5px;
 }
 button:active{
     border-color: white;
@@ -39,38 +46,44 @@ button:hover{
     background-color: rgb(194, 165, 165);
     color: #aa3570;
 }
-.counter p{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 150px;
-    color: wheat;
-    text-shadow: 2px 2px 6px #e14594;
+body{
+    background-image: linear-gradient(to bottom, #0f1b36, #114d7e);
+    background-repeat: no-repeat;
 }
-
+@media(max-width: 967px){
+    .counter div{
+        font-size: 100px;
+    }
+    .edit{
+        width: 120px;
+    }
+    .counter{
+        margin-top: 180px;
+    }
+}
 @media (max-width: 767px){
-    .counter p{
-        font-size: 90px;
+    .counter div{
+        font-size: 60px;
     }
-    .extra{
-        height: 190px;
+    .edit{
+        width: 90px;
+    }
+    .counter{
+        margin-top: 220px;
     }
 }
-@media (max-width: 460px){
-    .counter p{
-        font-size: 50px;
-        padding-top: 70px;
-        margin-top: 200px;
+@media(max-width:360px){
+    .counter div {
+        font-size: 40px;
+    }
+    .edit{
+        width: 50px;
+    }
+    .counter{
+        margin-top: 250px;
     }
     button{
         height: 40px;
         width: 70px;
-        font-size: 18px;
-        margin-bottom: 180px;
     }
 }
-@media (max-width: 360px){
-    .counter p{
-        padding-top: 100px;
-        font-size: 43px;
-    }
-}
-

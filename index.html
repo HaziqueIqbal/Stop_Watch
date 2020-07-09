@@ -10,16 +10,15 @@
 
 <body>
     <span style="color: gray;opacity: 0.4;">By: Muhammad Hazique Iqbal Khatri</span>
-    <div class="main">
         <div class="content">
             <div class="counter">
-                <P id="hour">00</P>
-                <p>:</p>
-                <P id="mins">00</P>
-                <p>:</p>
-                <P id="secs">00</P>
-                <p>:</p>
-                <P id="milli_sec">00</P>
+                <div id="hour" class="edit">00</div>
+                <div>:</div>
+                <div id="mins" class="edit">00</div>
+                <div>:</div>
+                <div id="secs" class="edit">00</div>
+                <div>:</div>
+                <div id="milli_sec" class="edit">00</div>
             </div>
             <div class="buttons">
                 <button onclick="start()" id="Start">Start</button>
@@ -27,8 +26,6 @@
                 <button onclick="clr()" id="clr">Reset</button>
             </div>
         </div>
-    </div>
-    <div class="extra"></div>
 </body>
 <script src="app.js"></script>
 

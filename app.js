@@ -1,46 +1,44 @@
 // declear and assign
-var hour = 0;
-var minuites = 0;
-var seconds = 0;
-var milliSeconds = 0;
-var disStart, disStop, disReset;
+let hour = 0;
+let minuites = 0;
+let seconds = 0;
+let milliSeconds = 0;
+let disStart, disStop, disReset;
 
-//get
-var h = document.getElementById("hour");
-var m = document.getElementById("mins");
-var s = document.getElementById("secs");
-var ms = document.getElementById("milli_sec");
-var disable;
+
+let h = document.getElementById("hour");
+let m = document.getElementById("mins");
+let s = document.getElementById("secs");
+let ms = document.getElementById("milli_sec");
+let disable;
 //counter
 function counter() {
     milliSeconds++;
-    ms.innerHTML = milliSeconds;
-
+    (milliSeconds < 10) ? ms.innerHTML = "0" + milliSeconds : ms.innerHTML= milliSeconds;
     if (milliSeconds / 100 === 1) {
         milliSeconds = 0;
         seconds++;
-        s.innerHTML = seconds;
-        if (seconds / 60 === 1) {
-            minuites++;
+        (seconds < 10) ? s.innerHTML = "0" + seconds : s.innerHTML= seconds;
+    }
+    else if (seconds / 60 === 1) {
+        seconds = 0;
+        minuites++;
+        if (minuites <= 9) {
+            m.innerHTML = "0" + minuites;
+        }
+        else {
             m.innerHTML = minuites;
-            if (minuites / 60 === 1) {
-                minuites = 0;
-                hour++;
-                h.innerHTML = hour;
-            }
         }
     }
-    if (milliSeconds < 10) {
-        ms.innerHTML = "0" + milliSeconds;
-    }
-    else if (seconds < 10) {
-        s.innerHTML = "0" + seconds
-    }
-    else if (minuites < 10) {
-        m.innerHTML = "0" + minuites;
-    }
-    else if (hour < 10) {
-        h.innerHTML = "0" + hour;
+    else if (minuites / 60 === 1) {
+        minuites = 0;
+        hour++;
+        if (hour < 10) {
+            h.innerHTML = "0" + hour;
+        }
+        else {
+            h.innerHTML = hour;
+        }
     }
 }
 
